@@ -6,9 +6,9 @@ class DateProcessor {
 	}
 
 	static getDateArray(date) {
-    const day = date.getDate().toString().padStart(2, "0");
-    const month = (date.getMonth() + 1).toString().padStart(2, "0");
-    const year = date.getFullYear();
+	    const day = date.getDate().toString().padStart(2, "0");
+	    const month = (date.getMonth() + 1).toString().padStart(2, "0");
+	    const year = date.getFullYear();
 
 	  return [day, month, year]
 	}
@@ -24,14 +24,14 @@ class DateProcessor {
 
 	static formatDate(date, format) {
 	  switch(format) {
-			case 'ISO':
-			  return date.toISOString();
-			case 'UTC':
-			  return date.toUTCString();
-			case 'LOCAL':
-			  return date.toLocaleString();
-			default:
-			  return date.toString();
+		case 'ISO':
+		  return date.toISOString();
+		case 'UTC':
+		  return date.toUTCString();
+		case 'LOCAL':
+		  return date.toLocaleString();
+		default:
+		  return date.toString();
 		}
 	}
 
