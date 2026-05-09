@@ -1,0 +1,30 @@
+.folder > .folder-button:not([data-opened="true"]) + .folder__children {
+    display: none;
+}
+
+.folder > .folder-button[data-opened="true"] + .folder__children {
+    display: flex;
+}
+
+.folder > .folder-button[data-opened="true"] {
+    .chevron-icon {
+        transform: rotate(360deg);
+    }
+}
+
+.chevron-icon {
+    transform: rotate(270deg);
+}
+
+.folder__children {
+    padding-left: 1rem;
+}
+
+.folder, .folder__children {
+    display: flex;
+    flex-direction: column;
+}
+
+.folder-button__icons-wrapper {
+    display: flex;
+}

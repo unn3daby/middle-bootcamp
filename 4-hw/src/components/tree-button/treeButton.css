@@ -1,0 +1,59 @@
+:root {
+    --active-color: rgba(0,0,0,0.07);
+}
+
+.tree-button {
+    cursor: pointer;
+    display: flex;
+    border: unset;
+    background-color: unset;
+}
+
+.tree-button:hover {
+    .tree-button__content {
+        border-radius: 0.25rem;
+        background-color: var(--active-color);
+    }
+}
+
+.tree-button__content {
+    padding: 0.25rem;
+
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    .tree-button__text {
+        flex: 1;
+    }
+
+    .tree-button__icon {
+        transition: transform 0.1s;
+        height: 1rem;
+        width: 1rem;
+    }
+}
+
+.tree-button--active {
+    position: relative;
+    .tree-button__content {
+        border-radius: 0.25rem;
+        background-color: var(--active-color);
+    }
+}
+
+.tree-button--active::before {
+    content: '';
+    position: absolute;
+
+    border-radius: 1rem;
+
+    height: 80%;
+    width: 3px;
+    left: 0;
+
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: royalblue;
+}
