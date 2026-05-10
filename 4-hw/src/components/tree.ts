@@ -8,6 +8,7 @@ export function createTree(root: HTMLElement, tree: FileSystemRecordModel, curre
   Object.entries(tree).forEach(([key, value]) => {
     const currentPathCopy = structuredClone(currentPath);
     currentPathCopy.push(key);
+
     const currentPathString = currentPathCopy.join('/');
     const isFolderOpened = activePath?.startsWith(currentPathString);
     const isButtonActive = currentPathString === activePath;

@@ -14,7 +14,14 @@
 					"type": "folder",
 					"children": {
 						"Homecoming": { "type": "file" },
-						"No Way Home": { "type": "file" }
+						"No Way Home": { "type": "file" },
+						"wow": {
+						  "type": "folder",
+  						"children": {
+  							"Galactus Trilogy": { "type": "file" },
+  							"The Coming of Galactus": { "type": "file" }
+  						}
+						}
 					}
 				},
 				"Iron Man": { "type": "file" },
