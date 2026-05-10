@@ -2,6 +2,7 @@ import { isEqualsTrue } from "../../utils/isStrictTrue";
 import { createTreeButton } from "../tree-button/treeButton";
 import folderIcon from '@/assets/folder.svg';
 import chevronIcon from '@/assets/chevron-down.svg';
+import folderOpenedIcon from '@/assets/folder-open.svg';
 import { createIconNode } from "@/utils/createIconNode";
 
 function setupFolderButton(buttonNode: HTMLElement, isOpened: boolean = false) {
@@ -19,10 +20,14 @@ function createButtonIcon() {
 
   const chevronNode = createIconNode(chevronIcon, 'tree-button__icon');
   chevronNode.classList.add('chevron-icon');
+  const openedFolderNode = createIconNode(folderOpenedIcon, 'tree-button__icon');
+  openedFolderNode.classList.add('folder-opened-icon');
   const folderNode = createIconNode(folderIcon, 'tree-button__icon');
+  folderNode.classList.add('folder-icon');
 
   iconsWrapper.appendChild(chevronNode);
-  iconsWrapper.appendChild(folderNode)
+  iconsWrapper.appendChild(folderNode);
+  iconsWrapper.appendChild(openedFolderNode);
 
   return iconsWrapper;
 }

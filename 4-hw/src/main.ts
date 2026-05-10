@@ -9,7 +9,6 @@ function fakeRequest(): Promise<FileSystemModel> {
   })
 }
 
-
 async function init() {
   const rootElement = document.querySelector<HTMLDivElement>('#app');
   rootElement.textContent = 'Идет загрузка...';

@@ -10,6 +10,24 @@
     .chevron-icon {
         transform: rotate(360deg);
     }
+
+    .folder-opened-icon {
+        display: block;
+    }
+
+    .folder-icon {
+        display: none;
+    }
+}
+
+.folder > .folder-button[data-opened="false"] {
+    .folder-opened-icon {
+        display: none;
+    }
+
+    .folder-icon {
+        display: block;
+    }
 }
 
 .chevron-icon {

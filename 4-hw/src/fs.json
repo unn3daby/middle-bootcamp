@@ -18,8 +18,7 @@
 						"wow": {
 						  "type": "folder",
   						"children": {
-  							"Galactus Trilogy": { "type": "file" },
-  							"The Coming of Galactus": { "type": "file" }
+
   						}
 						}
 					}
