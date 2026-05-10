@@ -4,8 +4,8 @@ import folderIcon from '@/assets/folder.svg';
 import chevronIcon from '@/assets/chevron-down.svg';
 import { createIconNode } from "@/utils/createIconNode";
 
-function setupFolderButton(buttonNode: HTMLElement) {
-  buttonNode.setAttribute('data-opened', 'false')
+function setupFolderButton(buttonNode: HTMLElement, isOpened: boolean = false) {
+  buttonNode.setAttribute('data-opened', isOpened ? 'true' : 'false')
 
   buttonNode.addEventListener('click', () => {
     const isFolderOpened = isEqualsTrue(buttonNode.getAttribute('data-opened'));
@@ -27,10 +27,10 @@ function createButtonIcon() {
   return iconsWrapper;
 }
 
-export function createFolderButton(name: string) {
+export function createFolderButton(name: string, isActive?: boolean, isOpened?: boolean) {
   const icon = createButtonIcon();
-  const buttonNode = createTreeButton(name, icon, 'folder-button');
+  const buttonNode = createTreeButton(name, icon, 'folder-button', isActive);
 
-  setupFolderButton(buttonNode);
+  setupFolderButton(buttonNode, isOpened);
   return buttonNode;
 }

@@ -15,8 +15,8 @@ function setupTreeButton(button: HTMLElement) {
     button.classList.toggle('tree-button--active')
   });
 }
-
-export function createTreeButton(text: string, icon?: string | HTMLElement, customClass?: string) {
+// TODO: аргументы после текста закинуть в объект и деструктурировать
+export function createTreeButton(text: string, icon?: string | HTMLElement, customClass?: string, isActive?: boolean) {
   const buttonNode = document.createElement('button');
   const buttonContent = document.createElement('div');
 
@@ -25,6 +25,7 @@ export function createTreeButton(text: string, icon?: string | HTMLElement, cust
   buttonNode.classList.add('tree-button');
   buttonContent.classList.add('tree-button__content')
   customClass && buttonNode.classList.add(customClass);
+  isActive && buttonNode.classList.add('tree-button--active')
 
   if (!icon) {
     buttonContent.textContent = text;
